@@ -113,8 +113,8 @@ Feature: ASK E2E
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then I click on element with xpath "//span[contains(text(), 'Log Out')]/.."
     And I wait for element with xpath "//img[@class='center-logo']" to be present
-    Then MUJ element "//input[@formcontrolname='email']" should not contain text "student0@gmail.com"
-    Then MUJ element "//input[@formcontrolname='password']" should not contain text "12345Abc"
+    Then MUJ element "Email field" should not contain text "student0@gmail.com"
+    Then MUJ element "Password field" should not contain text "12345Abc"
     Then I wait for 2 sec
 
   @scenario_3
@@ -234,6 +234,6 @@ Feature: ASK E2E
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then I click on element with xpath "//span[contains(text(), 'Log Out')]/.."
     And I wait for element with xpath "//img[@class='center-logo']" to be present
-    Then element with xpath "//input[@formcontrolname='email']" should not contain text "student1ask@gmail.com"
-    Then element with xpath "//input[@formcontrolname='password']" should not contain text "12345Abc"
+    Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
+    Then MUJ element "Password field" should not contain text "12345Abc"
     And I wait for 5 sec

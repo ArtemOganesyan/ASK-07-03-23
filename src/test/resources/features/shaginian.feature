@@ -6,10 +6,8 @@
     Scenario: Teacher Create The Quiz
 #    Log in as a teacher
       Given I open url "http://ask-stage.portnov.com"
-      Then I type "ilnehransi@mailnesia.com" into element with xpath "//input[@formcontrolname='email']"
-    #Then SOM type "ilnehransi@mailnesia.com" into "Email field"
-      Then I type "123abc" into element with xpath "//input[@formcontrolname='password']"
-    #Then SOM type "123abc" into "Password field"
+    Then SOM type "ilnehransi@mailnesia.com" into "Email field"
+    Then SOM type "123abc" into "Password field"
       Then I click on element with xpath "//button[@type='submit']"
 #    Go to the Quizzes
       Then I wait for element with xpath "//h5[contains(text(), 'Quizzes')]" to be present

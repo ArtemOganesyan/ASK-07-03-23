@@ -13,3 +13,8 @@
       Then I type "12345Abc" into element with xpath "//input[@formcontrolname='confirmPassword']"
       And I click on element with xpath "//button[@type='submit']"
       Then OAV activate user with email "fakeuseremail@fakedomain.com"
+
+    @webdriver_scenario
+    Scenario: OAV web driver scenario
+#      Then OAV test entire application
+      Then OAV authenticate as a teacher

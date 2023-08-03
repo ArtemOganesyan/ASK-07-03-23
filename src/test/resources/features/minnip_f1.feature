@@ -1,7 +1,7 @@
 # MinniP Feature File for LOGIN
 
 @minnip_f1
-Feature: Login into ASK application
+Feature: Login into ASK app
 
   @minnip_f11
   Scenario: Log in to ASK with valid credentials and Logout

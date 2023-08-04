@@ -12,4 +12,5 @@ Artem Oganesyan (fakeemail@gmail.com)\
 Natalia Shelkova
 Karen Avagian (karav85@apple.com)\
 > 
-> Marina Uralov Joy(another pull request)
+> 
+> marina Uralov Joy ( this is going great)

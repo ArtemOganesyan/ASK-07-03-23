@@ -2,6 +2,7 @@
 
 Base framework for Java Webdriver automation with Cucumber
 
-SOM change the same file
-Artem Oganesyan
-Natalia Shelkova (test@gmail.com)
+Oleg Shaginian (fake2email@gmail.com)\
+Artem Oganesyan (fakeemail@gmail.com)\
+Natalia Shelkova
+Karen Avagian (karav85@apple.com)\

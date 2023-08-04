@@ -101,4 +101,5 @@ public class MinniStepDefs {
     @And("MP is successfully logged out")
     public void mpIsSuccessfullyLoggedOut() {
     }
+
 }

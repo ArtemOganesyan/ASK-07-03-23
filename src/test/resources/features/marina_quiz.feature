@@ -1,3 +1,5 @@
+#I hope your day goes well just like this feature file
+
 @marina_quiz
 Feature: ASK Quiz
 

@@ -2,7 +2,14 @@
 
 Base framework for Java Webdriver automation with Cucumber
 
-Marina Uralov Joy(another pull request)
+<<<<<<< HEAD
+
 SOM change the same file
+=======
+Oleg Shaginian (fake2email@gmail.com)\
+>>>>>>> main
 Artem Oganesyan (fakeemail@gmail.com)\
 Natalia Shelkova
+Karen Avagian (karav85@apple.com)\
+> 
+> Marina Uralov Joy(another pull request)

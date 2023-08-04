@@ -17,4 +17,4 @@
     @webdriver_scenario
     Scenario: OAV web driver scenario
 #      Then OAV test entire application
-      Then OA V authenticate as a teacher
+      Then OAV authenticate as a teacher

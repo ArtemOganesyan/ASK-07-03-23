@@ -1,3 +1,5 @@
+#comment about registration
+
 @marina_registration
 Feature: New user registration then teacher deletes it
 

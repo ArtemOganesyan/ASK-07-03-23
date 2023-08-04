@@ -4,4 +4,4 @@ Base framework for Java Webdriver automation with Cucumber
 
 SOM change the same file
 Artem Oganesyan
-Natalia Shelkova
+Natalia Shelkova (test@gmail.com)

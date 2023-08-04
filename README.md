@@ -8,7 +8,7 @@ Natalia Shelkova
 Karen Avagian (karav85@apple.com)\
 Minni P (fake@email.com)\
 >>>>>>> main
-
+Karen
 !!! THAT WAS AWESOME,WOW !!!
 
 !!! This is Awesome !!!

@@ -6,11 +6,9 @@ Oleg Shaginian (fake2email@gmail.com)\
 Artem Oganesyan (fakeemail@gmail.com)\
 Natalia Shelkova
 Karen Avagian (karav85@apple.com)\
-<<<<<<< HEAD
-
-
-=======
 Minni P (fake@email.com)\
 >>>>>>> main
 
 !!! THAT WAS AWESOME,WOW !!!
+
+!!! This is Awesome !!!

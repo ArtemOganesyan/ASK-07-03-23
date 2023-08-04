@@ -6,3 +6,4 @@ Oleg Shaginian (fake2email@gmail.com)\
 Artem Oganesyan (fakeemail@gmail.com)\
 Natalia Shelkova
 Karen Avagian (karav85@apple.com)\
+Minni P (fake@email.com)\

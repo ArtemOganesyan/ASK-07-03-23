@@ -29,7 +29,7 @@ Feature: Login into ASK app
       | TEACHER_9@GMAIL.COM   | 12345Abc |
 
   @minnip_f13
-  Scenario Outline: Log into ASK with invalid credentials
+  Scenario Outline: Data-set Log into ASK with invalid credentials
     Given MP open url "http://ask-stage.portnov.com/#/login"
     Then MP type "<Email>" into element with xpath "//input[@formcontrolname='email']"
     Then MP type "<Password>" into element with xpath "//input[@formcontrolname='password']"
@@ -49,6 +49,6 @@ Feature: Login into ASK app
     Then MP type "student212@gmail.com" into element with xpath "//input[@formcontrolname='email']"
     Then MP type "123456abc" into element with xpath "//input[@formcontrolname='password']"
     Then MP click on element with xpath "//button[@type='submit']"
-    Then MP wait for 5 sec
+    Then MP wait for element with xpath "//simple-snack-bar[contains(text(), 'Authentication failed')]" to be present
     Then MP login is unsuccessful
     Then MP take screenshot

@@ -1,5 +1,5 @@
 #shaginian add this new line
-@saginian
+@shaginian
   Feature: E2E for "Create and Delete Quiz"
 
     @scenario1
@@ -34,6 +34,7 @@
       Then I move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-slider" to the "right" for 5 steps
 #    And change the Passing Rate to 50%
       Then I click on element with xpath "//span[@class='mat-button-wrapper'][contains (text(), '-')]" for 25 times
+      Then I take screenshot
 #    Save Quiz
       Then I click on element with xpath "//span[contains(text(), 'Save')]"
       Then I wait for 1 sec
@@ -67,3 +68,20 @@
         Then I wait for element with xpath "//span[contains(text(),'Log Out')]" to be present
         Then I click on element with xpath "//span[contains(text(),'Log Out')]"
         Then I wait for 3 sec
+        
+        
+        
+        @scenario3
+        Scenario: Delete Student account 
+          
+          Given I open url "http://ask-stage.portnov.com"
+          Then I wait for 1 sec
+          Then SOM type "teacher@gmail.com" into "Email field"
+          Then I wait for 1 sec
+          Then SOM type "12345Abc" into "Password field"
+          Then I wait for 1 sec
+          Then SOM "Sign in"
+          Then I wait for 1 sec
+          Then SOM click on "Users Management" button
+          Then I wait for 3 sec
+

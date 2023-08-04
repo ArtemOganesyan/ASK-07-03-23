@@ -46,5 +46,13 @@ public class SOMStepsDefs {
     }
 
 
+    @Then("SOM click on {string} button")
+    public void iClickOnElementUsersManagement(String xpath) {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'Management')]")).click();
+    }
 
+    @Then("SOM {string}")
+    public void iClickOnElementSignIn(String xpath) {
+        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+    }
 }

@@ -7,8 +7,7 @@ Artem Oganesyan (fakeemail@gmail.com)\
 Natalia Shelkova
 Karen Avagian (karav85@apple.com)\
 Minni P (fake@email.com)\
-<<<<<<< HEAD
-marina Uralov Joy ( email@email.com)\
+Marina Uralov Joy ( email@email.com)\
 oh calamity, another conflict\
 =======
 >>>>>>> main

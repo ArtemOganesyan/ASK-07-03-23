@@ -11,8 +11,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import support.Helper;
 
 import java.io.File;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.Iterator;
 import static org.assertj.core.api.Assertions.*;
@@ -46,6 +49,11 @@ public class marinaStepsDefs {
         String actualText = getDriver().findElement(By.xpath(MUJXPathLib.ElementXpathForName(element_name))).getText();
         assertThat(actualText).doesNotContain(text);
     }
-
+    @Then("MUJ activate user with email {string}")
+    public void mujActivateUserWithEmail(String email) throws SQLException, IOException {
+        String activationResult = Helper.getAccessToken(email);
+        String[] ar = activationResult.split(";");
+        Helper.activateUser(Integer.parseInt(ar[0]), ar[1]);
+    }
 }
 

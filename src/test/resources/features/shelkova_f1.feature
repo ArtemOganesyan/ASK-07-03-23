@@ -7,3 +7,4 @@
       Then I type "12345Abc" into element with xpath "//input[@formcontrolname='password']"
       And I click on element using JavaScript with xpath "//button[@type='submit']"
       And I wait for 1 sec
+      

@@ -17,8 +17,8 @@ public class KaranStepDefs {
         getDriver().findElement(By.xpath(xpath)).sendKeys(Keys.ARROW_LEFT);
     }
 
-    @Then("I move slider with xpath {string} to the {string} for {int} steps")
-    public void IMoveSliderWithXpathToTheForSteps(String xpath, String direction, int steps) {
+    @Then("Karan move slider with xpath {string} to the {string} for {int} steps")
+    public void KaranMoveSliderWithXpathToTheForSteps(String xpath, String direction, int steps) {
         WebElement slider = getDriver().findElement(By.xpath(xpath));
         for (int i = 0; i < steps; i++) {
             if (direction.equals("right")) {

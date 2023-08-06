@@ -15,7 +15,7 @@
       Then I type "My Quiz" into element with xpath "//input[@formcontrolname='name']"
       Then I click on element with xpath "//*[contains(text(),'add_circle')]/../.."
       Then I wait for 1 sec
-      Then I move slider with xpath "//*[contains(text(), 'Q1')]/../../..//mat-slider" to the "left" for 5 steps
+      And Karan move slider with xpath "//*[contains(text(), 'Q1')]/../../..//mat-slider" to the "left" for 5 steps
       Then I wait for 1 sec
 
     @scenario_2
@@ -32,5 +32,5 @@
       Then I type "My Quiz" into element with xpath "//input[@formcontrolname='name']"
       Then I click on element with xpath "//*[contains(text(),'add_circle')]/../.."
       Then I wait for 1 sec
-      Then I move slider with xpath "//*[contains(text(), 'Q1')]/../../..//mat-slider" to the "right" for 5 steps
+      And Karan move slider with xpath "//*[contains(text(), 'Q1')]/../../..//mat-slider" to the "right" for 5 steps
       Then I wait for 1 sec

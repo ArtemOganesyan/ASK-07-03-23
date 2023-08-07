@@ -108,4 +108,10 @@ public class MinniStepDefs {
         inputField.sendKeys(Keys.TAB);
     }
 
+    @Then("MP press enter key on element with xpath {string}")
+    public void mpPressEnterKeyOnElementWithXpath(String xpath) {
+        WebElement inputField = getDriver().findElement(By.xpath(xpath));
+        inputField.sendKeys(Keys.ENTER);
+    }
+
 }

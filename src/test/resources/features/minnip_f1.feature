@@ -52,3 +52,14 @@ Feature: Login into ASK app
     Then MP wait for element with xpath "//simple-snack-bar[contains(text(), 'Authentication failed')]" to be present
     Then MP login is unsuccessful
     Then MP take screenshot
+
+  @minnip_f15
+  Scenario: Log onto ASK with keyboard navigation keys
+    Given MP open url "http://ask-stage.portnov.com/#/login"
+    Then MP press tab key on keyboard to navigate to xpath "//input[@formcontrolname='email']"
+    Then MP type "teacher_9@gmail.com" into element with xpath "//input[@formcontrolname='email']"
+    Then MP press tab key on keyboard to navigate to xpath "//input[@formcontrolname='password']"
+    Then MP type "123456abc" into element with xpath "//input[@formcontrolname='password']"
+    Then MP press tab key on keyboard to navigate to xpath "//button[@type='submit']"
+    Then MP click on element with xpath "//button[@type='submit']"
+    And MP is successfully logged in

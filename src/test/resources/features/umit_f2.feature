@@ -1,7 +1,7 @@
 @umit_f2
 Feature: Automation Examples
   
-  @test1
+  @UA_test3
   Scenario: forgot password
     Given I open url "http://ask-stage.portnov.com/#/login"
     Then I click on element with xpath "//a[contains(text(),'I forgot my password')]"
@@ -10,7 +10,7 @@ Feature: Automation Examples
     Then I should see page title as "Assessment Control @ Portnov"
 
 
-  @test2
+  @UA_test4
   Scenario: Check My Grades
     Given I open url "http:/ask-stage.portnov.com"
     When I type "student25@gmail.com" into element with xpath "//input[@formcontrolname='email']"
@@ -30,7 +30,7 @@ Feature: Automation Examples
     Then I should see page title as "Assessment Control @ Portnov"
     
     
-  @test3
+  @UA_test5
   Scenario: UA User Activation
     Given I open url "http://ask-stage.portnov.com/#/registration"
     Then UA type "Utest" into element with xpath "//input[@formcontrolname='firstName']"

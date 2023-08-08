@@ -15,6 +15,7 @@ Feature: teacher log in
     Then I type "New Quiz" into element with xpath "//input[@formcontrolname='name']"
     Then I click on element with xpath "//mat-icon[contains(text(),'add_circle')]/../../.."
     Then I click on element with xpath "//*[contains(text(),'Single-Choice')]/../.."
+    Then I wait for 5 sec
     Then I type "What is today's date?" into element with xpath "//textarea[@formcontrolname='question']"
     Then I type "Answer1" into element with xpath "//textarea[@placeholder='Option 1*']"
     Then I type "Answer2" into element with xpath "//textarea[@placeholder='Option 2*']"

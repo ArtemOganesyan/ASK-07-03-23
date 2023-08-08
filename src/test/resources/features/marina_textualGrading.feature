@@ -24,6 +24,7 @@ Feature: ASK Grading Textual Question
     Then I click on element with xpath "//*[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "right" for 4 steps
     And I wait for element with xpath "//*[contains(text(), 'Q1')]/../../..//textarea" to be present
+    And I wait for 5 sec
     Then I type "What is Cookies?" into element with xpath "//*[contains(text(), 'Q1')]/../../..//textarea"
     Then I click on element with xpath "//*[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."

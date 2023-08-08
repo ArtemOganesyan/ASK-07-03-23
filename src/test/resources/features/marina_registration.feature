@@ -3,7 +3,7 @@
 @marina_registration
 Feature: New user registration then teacher deletes it
 
-  @scenario_1
+  @scenario_reg_1
   Scenario: User activation then Teacher deletes the User
     Given I open url "http://ask-stage.portnov.com/#/registration"
     Then I type "Eliminate" into element with xpath "//input[@formcontrolname='firstName']"
@@ -46,7 +46,7 @@ Feature: New user registration then teacher deletes it
     Then MUJ element "Password field" should not contain text "12345Abc"
 
 
-  @scenario_2
+  @scenario_reg_2
   Scenario Outline: User activation then Teacher deletes the User Outline
     Given I open url "http://ask-stage.portnov.com/#/registration"
     Then I type "<name>" into element with xpath "//input[@formcontrolname='firstName']"

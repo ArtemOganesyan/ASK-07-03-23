@@ -3,7 +3,7 @@
 @marina_E2E
 Feature: ASK E2E
 
-  @scenario_e2e_1
+  @mar_e2e_1
   Scenario: Teacher Creates a Quiz and Creates an Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -85,7 +85,7 @@ Feature: ASK E2E
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
 
-  @scenario_e2e_2
+  @mar_e2e_2
   Scenario: Student Submits an Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -127,7 +127,7 @@ Feature: ASK E2E
     Then MUJ element "Password field" should not contain text "12345Abc"
 #    Then I wait for 2 sec
 
-  @scenario_e2e_3
+  @mar_e2e_3
   Scenario: Teacher Grading the Submission
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -172,7 +172,7 @@ Feature: ASK E2E
 #    Then I wait for 2 sec
 
 
-  @scenario_e2e_4
+  @mar_e2e_4
   Scenario: Student Can view graded Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -206,7 +206,7 @@ Feature: ASK E2E
     Then MUJ element "Password field" should not contain text "12345Abc"
 #    Then I wait for 2 sec
 
-  @scenario_e2e_5
+  @mar_e2e_5
   Scenario: Teacher Deletes the Quiz and Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"

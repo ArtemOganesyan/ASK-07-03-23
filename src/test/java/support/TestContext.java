@@ -32,7 +32,7 @@ public class TestContext {
     }
 
     public static void initialize() {
-        initialize("chrome", "local", true);
+        initialize("chrome","local",true);
     }
 
     public static void teardown() {

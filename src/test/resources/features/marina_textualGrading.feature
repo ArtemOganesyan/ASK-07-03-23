@@ -23,6 +23,7 @@ Feature: ASK Grading Textual Question
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
     Then I click on element with xpath "//*[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "right" for 4 steps
+    And I wait for element with xpath "//*[contains(text(), 'Q1')]/../../..//textarea" to be present
     Then I type "What is Cookies?" into element with xpath "//*[contains(text(), 'Q1')]/../../..//textarea"
     Then I click on element with xpath "//*[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
@@ -233,7 +234,7 @@ Feature: ASK Grading Textual Question
     Then I click on element with xpath "//div[@class='cdk-overlay-pane']/div/div/button"
     Then I wait for element with xpath "//ac-modal-confirmation/div/button[2]" to be present
     Then I click on element with xpath "//ac-modal-confirmation/div/button[2]"
-    Then I wait for 2 sec
+    Then I wait for 5 sec
     Then element with xpath "//*[contains(text(), 'Test Textual Auto')]" should not be present
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then I click on element with xpath "//span[contains(text(), 'Log Out')]/.."

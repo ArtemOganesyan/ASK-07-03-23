@@ -1,7 +1,9 @@
+#commenting like nobody's business
+
 @marina_textualGrading
 Feature: ASK Grading Textual Question
 
-  @scenario_1
+  @scenario_text_1
   Scenario: Grading Quiz with textual showstopper question
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -67,7 +69,7 @@ Feature: ASK Grading Textual Question
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
 
-  @scenario_2
+  @scenario_text_2
   Scenario: Student Submits Answers
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -108,7 +110,7 @@ Feature: ASK Grading Textual Question
     Then MUJ element "Password field" should not contain text "12345Abc"
     Then I wait for 2 sec
 
-  @scenario_3
+  @scenario_text_3
   Scenario: Teacher Grading the Textual Quiz Submission
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -162,7 +164,7 @@ Feature: ASK Grading Textual Question
     Then I wait for 2 sec
 
 
-  @scenario_4
+  @scenario_text_4
   Scenario: Student Can view graded Textual Auto Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -197,7 +199,7 @@ Feature: ASK Grading Textual Question
     Then MUJ element "Password field" should not contain text "12345Abc"
     Then I wait for 2 sec
 
-  @scenario_5
+  @scenario_text_5
   Scenario: Teacher Deletes the Textual Auto Quiz and Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"

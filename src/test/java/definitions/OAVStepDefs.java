@@ -51,6 +51,5 @@ public class OAVStepDefs {
                 .build();
         Response response = client.newCall(request).execute();
         System.out.println(response.body().string());
-        var json = JsonParser.parseString(response.body().string());
     }
 }

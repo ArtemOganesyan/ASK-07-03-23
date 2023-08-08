@@ -16,10 +16,10 @@ import java.sql.SQLException;
 import static support.TestContext.getDriver;
 
 public class DVSStepDefs {
-    @Then("I move slider with xpath {string}")
-    public void iMoveSliderWithXpath(String xpath) {
-        getDriver().findElement(By.xpath(xpath)).sendKeys(Keys.ARROW_LEFT);
-    }
+//    @Then("I move slider with xpath {string}")
+//    public void iMoveSliderWithXpath(String xpath) {
+//        getDriver().findElement(By.xpath(xpath)).sendKeys(Keys.ARROW_LEFT);
+//    }
 
     @Then("Svistunov move slider for {string} question to the {string} for {int} steps")
     public void iMoveSliderForQuestionToTheForSteps(String questionID, String direction, int steps) {

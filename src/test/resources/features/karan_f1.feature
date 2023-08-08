@@ -1,7 +1,7 @@
 @karan_f1
   Feature: karan_f1
 
-      @scenario_1
+      @scenario1_karan_f1
     Scenario: User set minimum points using keyboard
       Given I open url "http://ask-stage.portnov.com"
       Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"
@@ -18,7 +18,7 @@
       And Karan move slider with xpath "//*[contains(text(), 'Q1')]/../../..//mat-slider" to the "left" for 5 steps
       Then I wait for 1 sec
 
-    @scenario_2
+    @scenario2_karan_f1
     Scenario: User set maximum points using keyboard
       Given I open url "http://ask-stage.portnov.com"
       Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"

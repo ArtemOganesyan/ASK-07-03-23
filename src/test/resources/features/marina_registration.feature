@@ -3,7 +3,7 @@
 @marina_registration
 Feature: New user registration then teacher deletes it
 
-  @scenario_1
+  @mar_reg_1
   Scenario: User activation then Teacher deletes the User
     Given I open url "http://ask-stage.portnov.com/#/registration"
     Then I type "Eliminate" into element with xpath "//input[@formcontrolname='firstName']"
@@ -14,6 +14,7 @@ Feature: New user registration then teacher deletes it
     Then I type "12345Abc" into element with xpath "//input[@formcontrolname='confirmPassword']"
     And I click on element with xpath "//button[@type='submit']"
     Then MUJ activate user with email "eliminate@email.com"
+    And I wait for 4 sec
     Then element with xpath "//mat-card/h4" should contain text "You have been Registered."
     Then element with xpath "//mat-icon[contains(text(), 'done')]" should be present
     Then I click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."
@@ -31,6 +32,7 @@ Feature: New user registration then teacher deletes it
     Then I scroll to the element with xpath "//mat-icon[contains(text(), 'delete')]/.." with offset 1
     Then I click on element with xpath "//mat-icon[contains(text(), 'delete')]/.."
     And I wait for element with xpath "//span[contains(text(), 'Delete')]/.." to be present
+    And I wait for 3 sec
     Then element with xpath "//div[@class='mat-dialog-content']/p" should contain text "Are you sure"
     Then I click on element with xpath "//span[contains(text(), 'Delete')]/.."
     Then I wait for element with xpath "//h4[contains(text(), 'Management')]" to be present
@@ -46,7 +48,7 @@ Feature: New user registration then teacher deletes it
     Then MUJ element "Password field" should not contain text "12345Abc"
 
 
-  @scenario_2
+  @mar_reg_2
   Scenario Outline: User activation then Teacher deletes the User Outline
     Given I open url "http://ask-stage.portnov.com/#/registration"
     Then I type "<name>" into element with xpath "//input[@formcontrolname='firstName']"
@@ -58,6 +60,7 @@ Feature: New user registration then teacher deletes it
     And I click on element with xpath "//button[@type='submit']"
     Then MUJ activate user with email "<email1>"
     And I wait for element with xpath "//mat-card/h4" to be present
+    And I wait for 4 sec
     Then element with xpath "//mat-card/h4" should contain text "You have been Registered."
     Then element with xpath "//mat-icon[contains(text(), 'done')]" should be present
     Then I click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."

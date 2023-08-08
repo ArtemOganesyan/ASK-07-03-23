@@ -3,8 +3,8 @@
 @marina_textualGrading
 Feature: ASK Grading Textual Question
 
-  @scenario_1
-  Scenario: Grading Quiz with textual showstopper question
+  @mar_gradText_1
+  Scenario: Creating a Quiz With Textual Showstopper and an Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
     And element with xpath "//img[@class='center-logo']" should be present
@@ -20,12 +20,18 @@ Feature: ASK Grading Textual Question
     Then I click on element with xpath "//*[contains(text(), 'Create New Quiz')]/.."
     Then I wait for element with xpath "//input[@formcontrolname='name']" to be present
     Then I type "Test Textual Auto" into element with xpath "//input[@formcontrolname='name']"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
+    And I wait for 2 sec
     Then I click on element with xpath "//*[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
+    And I wait for 2 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "right" for 4 steps
+    And I wait for element with xpath "//*[contains(text(), 'Q1')]/../../..//textarea" to be present
+    And I wait for 2 sec
     Then I type "What is Cookies?" into element with xpath "//*[contains(text(), 'Q1')]/../../..//textarea"
     Then I click on element with xpath "//*[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
+    And I wait for 2 sec
     And I wait for element with xpath "//*[contains(text(), 'Q2')]/../../..//mat-radio-button[2]" to be present
     Then I click on element with xpath "//*[contains(text(), 'Q2')]/../../..//mat-radio-button[2]"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-slider" to the "left" for 1 steps
@@ -37,7 +43,9 @@ Feature: ASK Grading Textual Question
     Then I type "to find happiness in life" into element with xpath "//*[contains(text(), 'Q2')]/../../..//textarea[@placeholder='Option 3*']"
     Then I click on element with xpath "//*[contains(text(), 'Option 1*')]/../../../../../..//mat-radio-button"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
+    And I wait for 2 sec
     Then I click on element with xpath "//*[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
+    And I wait for 2 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-slider" to the "right" for 1 steps
     And I wait for element with xpath "//*[contains(text(), 'Q3')]/../../..//textarea[@formcontrolname='question']" to be present
     And I wait for 3 sec
@@ -69,7 +77,7 @@ Feature: ASK Grading Textual Question
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
 
-  @scenario_2
+  @mar_gradText_2
   Scenario: Student Submits Answers
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -81,6 +89,7 @@ Feature: ASK Grading Textual Question
     Then element with xpath "//ac-side-menu" should be present
     And I wait for element with xpath "//ac-side-menu/mat-list/header" to be present
     Then I wait for element with xpath "//p[contains(text(), 'STUDENT')]" to be present
+    And I wait for 2 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "Student"
     Then I click on element with xpath "//*[contains(text(), 'Go To My Assignments')]/.."
     Then I wait for element with xpath "//td[contains(text(), 'Test Textual Auto')]" to be present
@@ -110,8 +119,8 @@ Feature: ASK Grading Textual Question
     Then MUJ element "Password field" should not contain text "12345Abc"
     Then I wait for 2 sec
 
-  @scenario_3
-  Scenario: Teacher Grading the Textual Quiz Submission
+  @mar_gradText_3
+  Scenario: Teacher Grading the Textual Showstopper Quiz Submission
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
     And element with xpath "//img[@class='center-logo']" should be present
@@ -164,8 +173,8 @@ Feature: ASK Grading Textual Question
     Then I wait for 2 sec
 
 
-  @scenario_4
-  Scenario: Student Can view graded Textual Auto Assignment
+  @mar_gradText_4
+  Scenario: Student Can View Graded Textual Auto Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
     And element with xpath "//img[@class='center-logo']" should be present
@@ -199,7 +208,7 @@ Feature: ASK Grading Textual Question
     Then MUJ element "Password field" should not contain text "12345Abc"
     Then I wait for 2 sec
 
-  @scenario_5
+  @mar_gradText_5
   Scenario: Teacher Deletes the Textual Auto Quiz and Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -233,7 +242,7 @@ Feature: ASK Grading Textual Question
     Then I click on element with xpath "//div[@class='cdk-overlay-pane']/div/div/button"
     Then I wait for element with xpath "//ac-modal-confirmation/div/button[2]" to be present
     Then I click on element with xpath "//ac-modal-confirmation/div/button[2]"
-    Then I wait for 2 sec
+    Then I wait for 5 sec
     Then element with xpath "//*[contains(text(), 'Test Textual Auto')]" should not be present
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then I click on element with xpath "//span[contains(text(), 'Log Out')]/.."

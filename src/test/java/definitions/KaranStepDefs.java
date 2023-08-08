@@ -12,8 +12,8 @@ import java.sql.SQLException;
 import static support.TestContext.getDriver;
 
 public class KaranStepDefs {
-    @Then("I move slider with xpath {string}")
-    public void iMoveSliderWithXpath(String xpath) {
+    @Then("Karan move slider with xpath {string}")
+    public void KaranMoveSliderWithXpath(String xpath) {
         getDriver().findElement(By.xpath(xpath)).sendKeys(Keys.ARROW_LEFT);
     }
 

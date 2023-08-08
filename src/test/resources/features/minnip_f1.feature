@@ -4,7 +4,7 @@
 Feature: Login into ASK app
 
   @minnip_f11
-  Scenario: Log in to ASK with valid credentials and Logout
+  Scenario: Log into ASK with valid credentials and Logout
     Given MP open url "http://ask-stage.portnov.com/#/login"
     Then MP type "teacher_9@gmail.com" into element with xpath "//input[@formcontrolname='email']"
     Then MP type "12345Abc" into element with xpath "//input[@formcontrolname='password']"

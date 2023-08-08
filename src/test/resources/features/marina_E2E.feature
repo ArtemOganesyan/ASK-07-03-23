@@ -22,7 +22,7 @@ Feature: ASK E2E
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
     Then I wait for element with xpath "//textarea[@formcontrolname='question']" to be present
-    And I wait for 4 sec
+    And I wait for 5 sec
     Then I type "Textual question 1" into element with xpath "//textarea[@formcontrolname='question']"
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "left" for 3 steps

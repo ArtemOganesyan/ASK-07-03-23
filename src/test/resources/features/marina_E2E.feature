@@ -19,15 +19,21 @@ Feature: ASK E2E
     Then I click on element with xpath "//*[contains(text(),'Create New Quiz')]/.."
     Then I wait for element with xpath "//input[@formcontrolname='name']" to be present
     Then I type "marinaAssignment" into element with xpath "//input[@formcontrolname='name']"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
+    And I wait for 2 sec
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea" to be present
-    And I wait for 10 sec
+    And I wait for 2 sec
     Then I type "Textual question 1" into element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "left" for 3 steps
     And I wait for element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.." to be present
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 2 sec
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-radio-button[2]" to be present
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-radio-button[2]"
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea" to be present
@@ -38,6 +44,7 @@ Feature: ASK E2E
     Then I click on element with xpath "//textarea[@placeholder='Option 1*']/../../../../..//mat-radio-button"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
+    And I wait for 2 sec
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea" to be present
     And I wait for 2 sec
     Then I type "Multiple-Choice question 3" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea"

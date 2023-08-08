@@ -4,7 +4,7 @@
 Feature: ASK Grading Textual Question
 
   @mar_gradText_1
-  Scenario: Grading Quiz with textual showstopper question
+  Scenario: Creating a Quiz With Textual Showstopper and an Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
     And element with xpath "//img[@class='center-logo']" should be present
@@ -120,7 +120,7 @@ Feature: ASK Grading Textual Question
     Then I wait for 2 sec
 
   @mar_gradText_3
-  Scenario: Teacher Grading the Textual Quiz Submission
+  Scenario: Teacher Grading the Textual Showstopper Quiz Submission
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
     And element with xpath "//img[@class='center-logo']" should be present
@@ -174,7 +174,7 @@ Feature: ASK Grading Textual Question
 
 
   @mar_gradText_4
-  Scenario: Student Can view graded Textual Auto Assignment
+  Scenario: Student Can View Graded Textual Auto Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
     And element with xpath "//img[@class='center-logo']" should be present

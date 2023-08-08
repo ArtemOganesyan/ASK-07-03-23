@@ -3,7 +3,7 @@
 @marina_quiz
 Feature: ASK Quiz
 
-  @scenario_1
+  @scenario_q_1
   Scenario: Teacher Creates and Deletes a Quiz
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -67,7 +67,7 @@ Feature: ASK Quiz
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
 
-  @scenario_2
+  @scenario_q_2
   Scenario Outline: Teacher Creates and Deletes a Quiz Outline
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"

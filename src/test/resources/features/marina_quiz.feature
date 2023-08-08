@@ -38,28 +38,22 @@ Feature: ASK Quiz
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-radio-button[2]"
     And I wait for 1 sec
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea" to be present
-    And I wait for 1 sec
     Then I type "What is the purpose of test completion criteria in a test plan?" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea"
     And I wait for 1 sec
     Then I type "To ensure that the test case specification is complete." into element with xpath "//textarea[@placeholder='Option 1*']"
-    And I wait for 1 sec
     Then I type "To plan when to stop testing." into element with xpath "//textarea[@placeholder='Option 2*']"
     And I wait for 1 sec
     Then I click on element with xpath "//div[@formarrayname='options']/../..//mat-radio-group[2]/mat-radio-button"
-    And I wait for 1 sec
     Then I click on element with xpath "//*[contains(text(),'Other')]/.."
     And I wait for 1 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
-    And I wait for 1 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
     And I wait for 1 sec
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea" to be present
     Then I type " What are the components of bug report?" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea"
-    And I wait for 1 sec
     Then I type "Status." into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea[@placeholder='Option 1*']"
     And I wait for 1 sec
     Then I type "Test data." into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea[@placeholder='Option 2*']"
-    And I wait for 1 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-slider" to the "right" for 4 steps
     And I wait for 1 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-checkbox[1]"
@@ -107,22 +101,34 @@ Feature: ASK Quiz
     And I wait for element with xpath "//input[@formcontrolname='name']" to be present
     Then I type "marinaAutoQuiz" into element with xpath "//input[@formcontrolname='name']"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 1 sec
     Then I click on element with xpath "//*[contains(text(),'Textual')]/../../../..//mat-radio-button"
+    And I wait for 1 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-slider" to the "left" for 3 steps
+    And I wait for 1 sec
     Then I type "<textual1>" into element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea"
+    And I wait for 1 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-checkbox"
+    And I wait for 1 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 1 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-radio-button[2]"
+    And I wait for 1 sec
     Then I type "<single-choice>" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea"
     Then I type "<SC_answer1>" into element with xpath "//textarea[@placeholder='Option 1*']"
+    And I wait for 1 sec
     Then I type "<SC_answer2>" into element with xpath "//textarea[@placeholder='Option 2*']"
     Then I click on element with xpath "//div[@formarrayname='options']/../..//mat-radio-group[2]/mat-radio-button"
+    And I wait for 1 sec
     Then I click on element with xpath "//*[contains(text(),'Other')]/.."
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 1 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea" to be present
+    And I wait for 1 sec
     Then I type "<multiple-choice>" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea"
     Then I type "<MC_answer1>" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea[@placeholder='Option 1*']"
+    And I wait for 1 sec
     Then I type "<MC_answer2>" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea[@placeholder='Option 2*']"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-slider" to the "right" for 4 steps
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-checkbox[1]"

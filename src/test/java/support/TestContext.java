@@ -32,7 +32,7 @@ public class TestContext {
     }
 
     public static void initialize() {
-        initialize("chrome", "local", false, false);
+        initialize("chrome", "local", true, true);
     }
 
     public static void teardown() {
@@ -45,7 +45,7 @@ public class TestContext {
         if (testEnv.equals("local")) {
             switch (browser) {
                 case "chrome":
-                    WebDriverManager.chromedriver().version("113").setup();
+                    WebDriverManager.chromedriver().setup();
                     Map<String, Object> chromePreferences = new HashMap<>();
                     chromePreferences.put("profile.default_content_settings.geolocation", 2);
                     chromePreferences.put("download.prompt_for_download", false);

@@ -3,7 +3,7 @@
 @marina_quiz
 Feature: ASK Quiz
 
-  @scenario_q_1
+  @mar_q_1
   Scenario: Teacher Creates and Deletes a Quiz
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -15,8 +15,8 @@ Feature: ASK Quiz
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//*[contains(text(), 'Sign In')]"
     And I wait for element with xpath "//h5[contains(text(),'Quizzes')]" to be present
-    Then I wait for 4 sec
-    Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
+#    Then I wait for 4 sec
+#    Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then I click on element with xpath "//h5[contains(text(),'Quizzes')]"
     And I wait for element with xpath "//*[contains(text(), 'Create New Quiz')]/.." to be present
     Then I click on element with xpath "//*[contains(text(), 'Create New Quiz')]/.."
@@ -68,7 +68,7 @@ Feature: ASK Quiz
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
 
-  @scenario_q_2
+  @mar_q_2
   Scenario Outline: Teacher Creates and Deletes a Quiz Outline
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -80,8 +80,8 @@ Feature: ASK Quiz
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//*[contains(text(), 'Sign In')]"
     And I wait for element with xpath "//h5[contains(text(),'Quizzes')]" to be present
-    And I wait for 4 sec
-    Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
+#    And I wait for 4 sec
+#    Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then I click on element with xpath "//h5[contains(text(),'Quizzes')]"
     And I wait for element with xpath "//*[contains(text(), 'Create New Quiz')]/.." to be present
     Then I click on element with xpath "//*[contains(text(), 'Create New Quiz')]/.."

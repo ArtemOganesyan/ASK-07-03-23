@@ -3,7 +3,7 @@
 @marina_UI
 Feature: ASK UI validation
 
-  @scenario_ui_1
+  @mar_ui_1
   Scenario: Student UI Validation
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -45,7 +45,7 @@ Feature: ASK UI validation
     Then MUJ element "Password field" should not contain text "12345Abc"
 
 
-  @scenario_ui_2
+  @mar_ui_2
   Scenario Outline: Student UI Validation Outline
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"

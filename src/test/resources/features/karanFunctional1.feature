@@ -27,7 +27,7 @@ Feature:Functional testing
     Then I type "12345Abc" into element with xpath "//input[@formcontrolname='password']"
     Then I click on element with xpath "//button[@type='submit']"
     Then I wait for element with xpath "//h5[contains(text(),'Settings')]" to be present
-    Then I click on element with xpath "//h5[contains(text(),'Settings')]"
+    Then I click on element with xpath "//h5[contains(text(),'Settings')]/../../../.."
     Then element with xpath "//button//span[contains(text(),'Change Your Password')]" should be present
     Then I click on element with xpath "//button//span[contains(text(),'Change Your Password')]"
     Then Karan type "12345Abc" into "Password field"

@@ -26,6 +26,7 @@ Feature: ASK Quiz
     Then I click on element with xpath "//*[contains(text(),'Textual')]/../../../..//mat-radio-button"
     And I wait for 2 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-slider" to the "left" for 3 steps
+    And I wait for 2 sec
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea" to be present
     And I wait for 2 sec
     Then I type "Why do we need Bug Tracking Database?" into element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea"

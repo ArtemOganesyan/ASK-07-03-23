@@ -24,11 +24,14 @@ Feature: ASK Quiz
     Then I type "marinaAutoQuiz" into element with xpath "//input[@formcontrolname='name']"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
     Then I click on element with xpath "//*[contains(text(),'Textual')]/../../../..//mat-radio-button"
+    And I wait for 2 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-slider" to the "left" for 3 steps
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea" to be present
+    And I wait for 2 sec
     Then I type "Why do we need Bug Tracking Database?" into element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea"
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-radio-button[2]"
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea" to be present
     Then I type "What is the purpose of test completion criteria in a test plan?" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea"
@@ -36,8 +39,11 @@ Feature: ASK Quiz
     Then I type "To plan when to stop testing." into element with xpath "//textarea[@placeholder='Option 2*']"
     Then I click on element with xpath "//div[@formarrayname='options']/../..//mat-radio-group[2]/mat-radio-button"
     Then I click on element with xpath "//*[contains(text(),'Other')]/.."
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
+    And I wait for 2 sec
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea" to be present
     Then I type " What are the components of bug report?" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea"
     Then I type "Status." into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea[@placeholder='Option 1*']"

@@ -20,8 +20,11 @@ Feature: ASK Grading Textual Question
     Then I click on element with xpath "//*[contains(text(), 'Create New Quiz')]/.."
     Then I wait for element with xpath "//input[@formcontrolname='name']" to be present
     Then I type "Test Textual Auto" into element with xpath "//input[@formcontrolname='name']"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
+    And I wait for 2 sec
     Then I click on element with xpath "//*[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
+    And I wait for 2 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "right" for 4 steps
     And I wait for element with xpath "//*[contains(text(), 'Q1')]/../../..//textarea" to be present
     And I wait for 5 sec

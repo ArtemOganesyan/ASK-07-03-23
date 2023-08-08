@@ -89,6 +89,7 @@ Feature: ASK Grading Textual Question
     Then element with xpath "//ac-side-menu" should be present
     And I wait for element with xpath "//ac-side-menu/mat-list/header" to be present
     Then I wait for element with xpath "//p[contains(text(), 'STUDENT')]" to be present
+    And I wait for 2 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "Student"
     Then I click on element with xpath "//*[contains(text(), 'Go To My Assignments')]/.."
     Then I wait for element with xpath "//td[contains(text(), 'Test Textual Auto')]" to be present

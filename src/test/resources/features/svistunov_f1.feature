@@ -9,8 +9,7 @@ Then DVS type "teacher@gmail.com" into "Email field"
 Then DVS type "12345Abc" into "Password field"
 Then DVS click on element with xpath "//button[@type='submit']"
 Then DVS wait for element with xpath "//h5[contains(text(), 'Quizzes')]" to be present
-#Then DVS click on element with xpath "//h5[contains(text(), 'Quizzes')]"
-Then DVS click on "Quizzes" button
+Then DVS click on element with xpath "//h5[contains(text(), 'Quizzes')]"
 Then DVS wait for element with xpath "//mat-panel-title[contains(text(),'# Mobile Demo 1')]" to be present
 Then DVS click on element with xpath "//mat-panel-title[contains(text(),'# Mobile Demo 1')]"
 Then DVS click on element with xpath "//span[contains(text(), 'Edit')]"

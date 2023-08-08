@@ -64,6 +64,11 @@ public class DVSStepDefs {
         executor.executeScript("arguments[0].click();", element);
     }
 
+    @Then("DVS click on {string} button")
+    public void dvsClickOnElementQuizzes(String xpath) {
+        getDriver().findElement(By.xpath("//h5[contains(text(), 'Quizzes')]")).click();
+    }
+
     @Then("DVS type \"([^\"]*)\" into element with xpath \"([^\"]*)\"$")
     public void dvsTypeIntoElementWithXpath(String text, String xpath) {
         getDriver().findElement(By.xpath(xpath)).sendKeys(text);

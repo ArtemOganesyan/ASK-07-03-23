@@ -5,9 +5,9 @@ import static support.TestContext.getDriver;
 import org.openqa.selenium.By;
 
 
-public class SniPredefinedSteps {
+public class SSPredefinedSteps {
     @Then("I create {int} questions")
-    public void iCreateQuestions(int numberofQuestions)throws InterruptedException {
+    public void iCreateQuestions(int numberofQuestions) throws InterruptedException {
         for (int i = 1; i <= numberofQuestions; i++) {
             getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]")).click();
             Thread.sleep(250);
@@ -19,4 +19,5 @@ public class SniPredefinedSteps {
 
         }
     }
-}
+    }
+

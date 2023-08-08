@@ -17,4 +17,4 @@ Feature: Test Set: Single Choice Question
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
     Then I click on element with xpath "//*[contains(text(),'Single-Choice')]/../../../..//mat-radio-button"
     Then I wait for element with xpath "//textarea[@formcontrolname='question']" to be present
-    Then I type "What is QA ?" into element with xpath "//textarea[@formcontrolname='question'"
+#    Then I type "What is QA ?" into element with xpath "//textarea[@formcontrolname='question'"

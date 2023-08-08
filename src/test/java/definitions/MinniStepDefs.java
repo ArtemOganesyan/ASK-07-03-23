@@ -8,10 +8,12 @@ import org.openqa.selenium.*;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import support.Helper;
 import support.TestContext;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Date;
 
 import static org.assertj.core.api.Assertions.*;
@@ -26,6 +28,11 @@ public class MinniStepDefs {
     @Then("MP type {string} into element with xpath {string}")
     public void mpTypeIntoElementWithXpath(String text, String xpath) {
         getDriver().findElement(By.xpath(xpath)).sendKeys(text);
+    }
+
+    @Then("MP type {string} into {string}")
+    public void iTypeInto(String text, String element_text) {
+        getDriver().findElement(By.xpath(MinnipVariable.ElementXpathForText(element_text))).sendKeys(text);
     }
 
     @Then("MP click on element with xpath {string}")
@@ -81,6 +88,10 @@ public class MinniStepDefs {
         }
     }
 
+    private String xpathForQuestion(String questionID) {
+        return "//*[contains(text(),'"+questionID+"')]/../../..mat-slider";
+    }
+
     @Then("MP move slider for {string} question to the {string} for {int} steps")
     public void mpMoveSliderForQuestionToTheForSteps(String questionID, String direction, int steps) {
         WebElement slider = getDriver().findElement(By.xpath(xpathForQuestion(questionID)));
@@ -92,10 +103,6 @@ public class MinniStepDefs {
                 slider.sendKeys(Keys.ARROW_LEFT);
             }
         }
-    }
-
-    private String xpathForQuestion(String questionID) {
-        return "//*[contains(text(),'"+questionID+"')]/../../..mat-slider";
     }
 
     @And("MP is successfully logged out")
@@ -114,4 +121,30 @@ public class MinniStepDefs {
         inputField.sendKeys(Keys.ENTER);
     }
 
+    @Then("MP should see page title as {string}")
+    public void mpShouldSeePageTitleAs(String title) {
+        assertThat(getDriver().getTitle()).isEqualTo(title);
+    }
+
+    @Then("^MP scroll to the element with xpath \"([^\"]*)\" with offset (\\d+)$")
+    public void iScrollToTheElementWithXpathWithOffset(String xpath, int offset) throws Exception {
+        WebElement element = getDriver().findElement(By.xpath(xpath));
+        JavascriptExecutor executor = (JavascriptExecutor) getDriver();
+        executor.executeScript("arguments[0].scrollIntoView(false);", element);
+        executor.executeScript("window.scrollBy(0, " + offset + ");", element);
+        Thread.sleep(500);
+    }
+
+    @Then("MP activate user with email {string}")
+    public void mpActivateUserWithEmail(String email) throws SQLException, IOException {
+        String activationResult = Helper.getAccessToken(email);
+        String[] ar = activationResult.split(";");
+        Helper.activateUser(Integer.parseInt(ar[0]), ar[1]);
+    }
+
+    @Then("^Mp element with xpath \"([^\"]*)\" should not contain text \"([^\"]*)\"$")
+    public void mpElementWithXpathShouldNotContainText(String xpath, String text) {
+        String actualText = getDriver().findElement(By.xpath(xpath)).getText();
+        assertThat(actualText).doesNotContain(text);
+    }
 }

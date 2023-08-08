@@ -1,6 +1,6 @@
 # MinniP Feature File for LOGIN
 
-@minnip_f1
+@minnip_login
 Feature: Login into ASK app
 
   @minnip_f11
@@ -15,8 +15,9 @@ Feature: Login into ASK app
     Then MP click on element with xpath "//span[contains(text(), 'Log Out')]/../../..//button[2]"
     And MP is successfully logged out
     Then MP wait for element with xpath "//img[@class='center-logo']" to be present
-    Then element with xpath "//input[@formcontrolname='email']" should not contain text "teacher_9@gmail.com"
-    Then element with xpath "//input[@formcontrolname='password']" should not contain text "12345Abc"
+    Then Mp element with xpath "//input[@formcontrolname='email']" should not contain text "teacher_9@gmail.com"
+    Then Mp element with xpath "//input[@formcontrolname='password']" should not contain text "12345Abc"
+
 
   @minnip_f12
   Scenario Outline: Log into ASK with valid credentials

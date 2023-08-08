@@ -3,7 +3,7 @@
 @marina_E2E
 Feature: ASK E2E
 
-  @scenario_e2e_1
+  @mar_e2e_1
   Scenario: Teacher Creates a Quiz and Creates an Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -12,31 +12,43 @@ Feature: ASK E2E
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//span[contains(text(), 'Sign In')]/.."
     And I wait for element with xpath "//ac-side-menu/mat-list/header/div/p" to be present
-    And I wait for 2 sec
+    And I wait for 3 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then I click on element with xpath "//h5[contains(text(), 'Quizzes')]"
     Then I wait for element with xpath "//*[contains(text(),'Create New Quiz')]/.." to be present
     Then I click on element with xpath "//*[contains(text(),'Create New Quiz')]/.."
     Then I wait for element with xpath "//input[@formcontrolname='name']" to be present
     Then I type "marinaAssignment" into element with xpath "//input[@formcontrolname='name']"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
-    Then I wait for element with xpath "//textarea[@formcontrolname='question']" to be present
-    Then I type "Textual question 1" into element with xpath "//textarea[@formcontrolname='question']"
+    And I wait for 2 sec
+    Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea" to be present
+    And I wait for 2 sec
+    Then I type "Textual question 1" into element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//textarea"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "left" for 3 steps
     And I wait for element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.." to be present
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 2 sec
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-radio-button[2]" to be present
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//mat-radio-button[2]"
     And I wait for element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea" to be present
+    And I wait for 2 sec
     Then I type "Single-Choice question 2" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea"
     Then I type "SC Answer 1" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea[@placeholder='Option 1*']"
     Then I type "SC Answer 2" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea[@placeholder='Option 2*']"
     Then I click on element with xpath "//textarea[@placeholder='Option 1*']/../../../../..//mat-radio-button"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
+    And I wait for 2 sec
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea" to be present
+    And I wait for 2 sec
     Then I type "Multiple-Choice question 3" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea"
     Then I type "MC Answer 1" into element with xpath "//*[contains(text(), 'Q3')]/../../..//textarea[@placeholder='Option 1*']"
     Then I type "MC Answer 2" into element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea[@placeholder='Option 2*']"
@@ -75,7 +87,7 @@ Feature: ASK E2E
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
 
-  @scenario_e2e_2
+  @mar_e2e_2
   Scenario: Student Submits an Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -84,7 +96,7 @@ Feature: ASK E2E
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//span[contains(text(), 'Sign In')]/.."
     And I wait for element with xpath "//ac-side-menu/mat-list/header/div/p" to be present
-    And I wait for 2 sec
+    And I wait for 3 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "STUDENT"
     And I wait for element with xpath "//span[@class='bold']/../..//p[contains(text(), 'You have')]" to be present
     Then element with xpath "//span[@class='bold']/../..//p[contains(text(), 'You have')]" should contain text "1"
@@ -101,6 +113,7 @@ Feature: ASK E2E
     Then I click on element with xpath "//mat-checkbox[1]/label//div[@class='mat-checkbox-inner-container']"
     Then I click on element with xpath "//span[contains(text(), 'Submit My Answers')]/.."
     And I wait for element with xpath "//ac-modal-notification/h1" to be present
+    And I wait for 2 sec
     Then element with xpath "//ac-modal-notification/h1" should contain text "Success!"
     Then element with xpath "//ac-modal-notification/div/p" should contain text "Your submission has been accepted."
     Then I click on element with xpath "//*[contains(text(), 'Ok')]/.."
@@ -115,9 +128,9 @@ Feature: ASK E2E
     And I wait for element with xpath "//img[@class='center-logo']" to be present
     Then MUJ element "Email field" should not contain text "student0@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
-    Then I wait for 2 sec
+#    Then I wait for 2 sec
 
-  @scenario_e2e_3
+  @mar_e2e_3
   Scenario: Teacher Grading the Submission
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -159,10 +172,10 @@ Feature: ASK E2E
     And I wait for element with xpath "//img[@class='center-logo']" to be present
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
-    Then I wait for 2 sec
+#    Then I wait for 2 sec
 
 
-  @scenario_e2e_4
+  @mar_e2e_4
   Scenario: Student Can view graded Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -194,9 +207,9 @@ Feature: ASK E2E
     And I wait for element with xpath "//img[@class='center-logo']" to be present
     Then MUJ element "Email field" should not contain text "student0@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
-    Then I wait for 2 sec
+#    Then I wait for 2 sec
 
-  @scenario_e2e_5
+  @mar_e2e_5
   Scenario: Teacher Deletes the Quiz and Assignment
     Given I open url "http://ask-stage.portnov.com/"
     Then I should see page title as "Assessment Control @ Portnov"
@@ -236,4 +249,4 @@ Feature: ASK E2E
     And I wait for element with xpath "//img[@class='center-logo']" to be present
     Then MUJ element "Email field" should not contain text "student1ask@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
-    And I wait for 5 sec
+#    And I wait for 5 sec

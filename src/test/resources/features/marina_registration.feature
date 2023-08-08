@@ -14,7 +14,7 @@ Feature: New user registration then teacher deletes it
     Then I type "12345Abc" into element with xpath "//input[@formcontrolname='confirmPassword']"
     And I click on element with xpath "//button[@type='submit']"
     Then MUJ activate user with email "eliminate@email.com"
-    And I wait for 2 sec
+    And I wait for 3 sec
     Then element with xpath "//mat-card/h4" should contain text "You have been Registered."
     Then element with xpath "//mat-icon[contains(text(), 'done')]" should be present
     Then I click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."
@@ -60,6 +60,7 @@ Feature: New user registration then teacher deletes it
     And I click on element with xpath "//button[@type='submit']"
     Then MUJ activate user with email "<email1>"
     And I wait for element with xpath "//mat-card/h4" to be present
+    And I wait for 3 sec
     Then element with xpath "//mat-card/h4" should contain text "You have been Registered."
     Then element with xpath "//mat-icon[contains(text(), 'done')]" should be present
     Then I click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."

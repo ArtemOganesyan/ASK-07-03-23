@@ -12,6 +12,7 @@
       Then I type "12345Abc" into element with xpath "//input[@formcontrolname='password']"
       Then I type "12345Abc" into element with xpath "//input[@formcontrolname='confirmPassword']"
       And I click on element with xpath "//button[@type='submit']"
+      And I take screenshot
       Then OAV activate user with email "fakeuseremail@fakedomain.com"
 
     @webdriver_scenario

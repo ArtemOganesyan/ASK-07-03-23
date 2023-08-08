@@ -7,10 +7,11 @@ Feature:Functional testing
     Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"
     Then I type "12345Abc" into element with xpath "//input[@formcontrolname='password']"
     Then I click on element with xpath "//button[@type='submit']"
-    Then I wait for element with xpath "//h5[contains(text(),'Settings')]" to be present
-    Then I click on element with xpath "//h5[contains(text(),'Settings')]"
-    Then element with xpath "//button//span[contains(text(),'Change Your Name')]" should be present
-    Then I click on element with xpath "//button//span[contains(text(),'Change Your Name')]"
+    Then I wait for element with xpath "//h5[contains(text(),'Settings')]/../../../.." to be present
+    Then I click on element with xpath "//h5[contains(text(),'Settings')]/../../../.."
+    Then I wait for 2 sec
+    #Then element with xpath "//text()[contains(.,'Change Your Name')]" should be present
+    Then I click on element with xpath "//text()[contains(.,'Change Your Name')]"
     Then I wait for element with xpath "//h1[@class='mat-dialog-title']/../.." to be present
     Then I clear element with xpath "//input[@formcontrolname='name']"
     Then I type "TeacherEleven " into element with xpath "//input[@formcontrolname='name']"

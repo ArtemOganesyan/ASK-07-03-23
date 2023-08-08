@@ -102,4 +102,16 @@ public class MinniStepDefs {
     public void mpIsSuccessfullyLoggedOut() {
     }
 
+    @Then("MP press tab key on keyboard to navigate to xpath {string}")
+    public void mpPressTabKeyOnKeyboardToNavigateToXpath(String xpath) {
+        WebElement inputField = getDriver().findElement(By.xpath(xpath));
+        inputField.sendKeys(Keys.TAB);
+    }
+
+    @Then("MP press enter key on element with xpath {string}")
+    public void mpPressEnterKeyOnElementWithXpath(String xpath) {
+        WebElement inputField = getDriver().findElement(By.xpath(xpath));
+        inputField.sendKeys(Keys.ENTER);
+    }
+
 }

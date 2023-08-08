@@ -1,6 +1,6 @@
 Feature: Test Set: Single Choice Question
 
-  @scenario_1
+  @scenario_Kar1
   Scenario: Teacher assigns quiz to student
     Given I open url "http://ask-stage.portnov.com"
     Then I type "ilnehransi@mailnesia.com" into element with xpath "//*[@formcontrolname='email']"

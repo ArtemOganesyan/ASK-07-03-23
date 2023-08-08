@@ -1,7 +1,7 @@
 Feature: Test Set: Multiple Choice Question
 
 
-  @scenario_1
+  @SS_I
   Scenario: Teacher assigns quiz to student
     Given I open url "http://ask-stage.portnov.com"
     Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"
@@ -22,7 +22,7 @@ Feature: Test Set: Multiple Choice Question
     Then I click on element with xpath "//span[contains(text(),'Give Assignment')]/.."
 
 
-  @scenario_2
+  @SS_II
   Scenario: User creates a question
     Given I open url "http://ask-stage.portnov.com"
     Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"
@@ -37,7 +37,7 @@ Feature: Test Set: Multiple Choice Question
     Then I click on element with xpath "//*[contains(text(), 'add_circle')]/../.."
 
 
-  @scenario_3
+  @SS_III
   Scenario: User creates up to 15 choices
     Given I open url "http://ask-stage.portnov.com"
     Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"
@@ -52,7 +52,7 @@ Feature: Test Set: Multiple Choice Question
 #        Then I click on element with xpath "//*[contains(text(), 'add_circle')]/../.."
     Then I create 15 questions
 
-  @scenario_4
+  @SS_IV
   Scenario: User creates 16 questions
     Given I open url "http://ask-stage.portnov.com"
     Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"

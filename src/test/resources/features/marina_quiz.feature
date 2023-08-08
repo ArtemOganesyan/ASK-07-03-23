@@ -47,6 +47,7 @@ Feature: ASK Quiz
     Then I click on element with xpath "//*[contains(text(),'Other')]/.."
     And I wait for 1 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 1 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
     And I wait for 1 sec
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea" to be present

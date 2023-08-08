@@ -42,7 +42,9 @@ Feature: ASK E2E
     Then I type "SC Answer 1" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea[@placeholder='Option 1*']"
     Then I type "SC Answer 2" into element with xpath "//mat-panel-title[contains(text(), 'Q2')]/../../..//textarea[@placeholder='Option 2*']"
     Then I click on element with xpath "//textarea[@placeholder='Option 1*']/../../../../..//mat-radio-button"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../../..//button"
+    And I wait for 2 sec
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
     And I wait for 2 sec
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//textarea" to be present

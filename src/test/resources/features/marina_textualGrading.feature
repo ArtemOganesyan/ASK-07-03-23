@@ -43,7 +43,9 @@ Feature: ASK Grading Textual Question
     Then I type "to find happiness in life" into element with xpath "//*[contains(text(), 'Q2')]/../../..//textarea[@placeholder='Option 3*']"
     Then I click on element with xpath "//*[contains(text(), 'Option 1*')]/../../../../../..//mat-radio-button"
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
+    And I wait for 2 sec
     Then I click on element with xpath "//*[contains(text(), 'Q3')]/../../..//mat-radio-button[3]"
+    And I wait for 2 sec
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q3')]/../../..//mat-slider" to the "right" for 1 steps
     And I wait for element with xpath "//*[contains(text(), 'Q3')]/../../..//textarea[@formcontrolname='question']" to be present
     And I wait for 3 sec

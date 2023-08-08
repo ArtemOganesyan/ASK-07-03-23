@@ -15,7 +15,7 @@ Feature: ASK Quiz
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//*[contains(text(), 'Sign In')]"
     And I wait for element with xpath "//h5[contains(text(),'Quizzes')]" to be present
-#    Then I wait for 4 sec
+    Then I wait for 2 sec
 #    Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then I click on element with xpath "//h5[contains(text(),'Quizzes')]"
     And I wait for element with xpath "//*[contains(text(), 'Create New Quiz')]/.." to be present
@@ -80,7 +80,7 @@ Feature: ASK Quiz
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//*[contains(text(), 'Sign In')]"
     And I wait for element with xpath "//h5[contains(text(),'Quizzes')]" to be present
-#    And I wait for 4 sec
+    And I wait for 2 sec
 #    Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then I click on element with xpath "//h5[contains(text(),'Quizzes')]"
     And I wait for element with xpath "//*[contains(text(), 'Create New Quiz')]/.." to be present

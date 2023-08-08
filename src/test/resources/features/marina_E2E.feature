@@ -113,6 +113,7 @@ Feature: ASK E2E
     Then I click on element with xpath "//mat-checkbox[1]/label//div[@class='mat-checkbox-inner-container']"
     Then I click on element with xpath "//span[contains(text(), 'Submit My Answers')]/.."
     And I wait for element with xpath "//ac-modal-notification/h1" to be present
+    And I wait for 2 sec
     Then element with xpath "//ac-modal-notification/h1" should contain text "Success!"
     Then element with xpath "//ac-modal-notification/div/p" should contain text "Your submission has been accepted."
     Then I click on element with xpath "//*[contains(text(), 'Ok')]/.."

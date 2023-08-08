@@ -18,7 +18,7 @@ Feature: teacher log in
     Then I type "What is today's date?" into element with xpath "//textarea[@formcontrolname='question']"
     Then I type "Answer1" into element with xpath "//textarea[@placeholder='Option 1*']"
     Then I type "Answer2" into element with xpath "//textarea[@placeholder='Option 2*']"
-git     Then I click on element with xpath "//div[@formarrayname='options']/../..//mat-radio-group[2]/mat-radio-button"
+    Then I click on element with xpath "//div[@formarrayname='options']/../..//mat-radio-group[2]/mat-radio-button"
     Then I click on element with xpath "//*[contains(text(),'Include')]/../.."
     Then I click on element with xpath "//*[contains(text(),'Save')]/.."
 

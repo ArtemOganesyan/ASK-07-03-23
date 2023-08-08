@@ -12,7 +12,7 @@ Feature: ASK E2E
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//span[contains(text(), 'Sign In')]/.."
     And I wait for element with xpath "//ac-side-menu/mat-list/header/div/p" to be present
-    And I wait for 2 sec
+    And I wait for 3 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then I click on element with xpath "//h5[contains(text(), 'Quizzes')]"
     Then I wait for element with xpath "//*[contains(text(),'Create New Quiz')]/.." to be present
@@ -22,6 +22,7 @@ Feature: ASK E2E
     Then I click on element with xpath "//mat-icon[contains(text(), 'add_circle')]/../.."
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-radio-button[1]"
     Then I wait for element with xpath "//textarea[@formcontrolname='question']" to be present
+    And I wait for 2 sec
     Then I type "Textual question 1" into element with xpath "//textarea[@formcontrolname='question']"
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../..//mat-checkbox"
     Then MUJ move slider with xpath "//mat-panel-title[contains(text(), 'Q1')]/../../../..//mat-slider" to the "left" for 3 steps
@@ -84,7 +85,7 @@ Feature: ASK E2E
     Then MUJ type "12345Abc" into "Password field"
     Then I click on element with xpath "//span[contains(text(), 'Sign In')]/.."
     And I wait for element with xpath "//ac-side-menu/mat-list/header/div/p" to be present
-    And I wait for 2 sec
+    And I wait for 3 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "STUDENT"
     And I wait for element with xpath "//span[@class='bold']/../..//p[contains(text(), 'You have')]" to be present
     Then element with xpath "//span[@class='bold']/../..//p[contains(text(), 'You have')]" should contain text "1"
@@ -115,7 +116,7 @@ Feature: ASK E2E
     And I wait for element with xpath "//img[@class='center-logo']" to be present
     Then MUJ element "Email field" should not contain text "student0@gmail.com"
     Then MUJ element "Password field" should not contain text "12345Abc"
-    Then I wait for 2 sec
+#    Then I wait for 2 sec
 
   @scenario_e2e_3
   Scenario: Teacher Grading the Submission

@@ -18,8 +18,8 @@ Feature: New user account registration in ASK
     Then MP wait for element with xpath "//mat-icon[contains(text(), 'done')]" to be present
     Then MP click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."
     Then MP wait for element with xpath "//img[@class='center-logo']" to be present
-    Then MP type "teacher_9@gmail.com" into "Email field"
-    Then MP type "12345Abc" into "Password field"
+    Then MP type "teacher_9@gmail.com" into "Email Field"
+    Then MP type "12345Abc" into "Password Field"
     Then MP click on element with xpath "//span[contains(text(), 'Sign In')]/.."
     Then MP wait for element with xpath "//ac-side-menu/mat-list/header/div/p" to be present
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"

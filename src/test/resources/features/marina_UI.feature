@@ -21,6 +21,7 @@ Feature: ASK UI validation
     And I wait for element with xpath "//ac-side-menu/mat-list/header" to be present
     And I wait for 3 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "STUDENT"
+    Then MUJ take screenshot
     Then element with xpath "//ac-home-student/mat-card[1]/h4" should contain text "Assignments"
     Then element with xpath "//ac-home-student/mat-card[2]/h4" should contain text "Grades"
     Then I click on element with xpath "//h5[contains(text(), 'My Assignments')]"
@@ -45,6 +46,7 @@ Feature: ASK UI validation
     Then MUJ element "Password field" should not contain text "12345Abc"
 
 
+
   @mar_ui_2
   Scenario Outline: Student UI Validation Outline
     Given I open url "http://ask-stage.portnov.com/"
@@ -63,6 +65,7 @@ Feature: ASK UI validation
     And I wait for element with xpath "//ac-side-menu/mat-list/header" to be present
     And I wait for 3 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "STUDENT"
+    Then MUJ take screenshot
     Then element with xpath "//ac-home-student/mat-card[1]/h4" should contain text "Assignments"
     Then element with xpath "//ac-home-student/mat-card[2]/h4" should contain text "Grades"
     Then I click on element with xpath "//h5[contains(text(), 'My Assignments')]"

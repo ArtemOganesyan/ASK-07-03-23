@@ -61,12 +61,14 @@ Feature: ASK Quiz
     Then element with xpath "//ac-quiz-passing-percentage/..//h3" should contain text "Passing Rate"
     Then element with xpath "//ac-quiz-passing-percentage/..//h1" should contain text "75%"
     Then element with xpath "//ac-quiz-passing-percentage/..//h5" should contain text "12 of 16 Points"
+    Then MUJ take screenshot
     Then I click on element with xpath "//span[contains(text(), 'Save')]/.."
     Then I wait for element with xpath "//div[@class='quizzes']" to be present
     Then element with xpath "//div[@class='quizzes']" should contain text "marinaAutoQuiz"
     Then I click on element with xpath "//*[contains(text(), 'marinaAutoQuiz')]/..//mat-panel-description[contains(text(), '3 Question(s)')]"
     And I wait for 2 sec
     And I wait for element with xpath "//*[contains(text(), 'marinaAutoQuiz')]/../../..//*[contains(text(), 'Delete')]" to be present
+    Then MUJ take screenshot
     Then I click on element with xpath "//*[contains(text(), 'marinaAutoQuiz')]/../../..//*[contains(text(), 'Delete')]"
     Then I click on element with xpath "//mat-dialog-container[@role='dialog']/../..//button[2]"
     And I wait for element with xpath "//div[@class='quizzes']" to be present
@@ -136,17 +138,20 @@ Feature: ASK Quiz
     Then element with xpath "//ac-quiz-passing-percentage/..//h3" should contain text "Passing Rate"
     Then element with xpath "//ac-quiz-passing-percentage/..//h1" should contain text "75%"
     Then element with xpath "//ac-quiz-passing-percentage/..//h5" should contain text "12 of 16 Points"
+    Then MUJ take screenshot
     Then I click on element with xpath "//span[contains(text(), 'Save')]/.."
     Then I wait for element with xpath "//div[@class='quizzes']" to be present
     Then element with xpath "//div[@class='quizzes']" should contain text "marinaAutoQuiz"
     Then I click on element with xpath "//*[contains(text(), 'marinaAutoQuiz')]/..//mat-panel-description[contains(text(), '3 Question(s)')]"
     And I wait for 2 sec
     And I wait for element with xpath "//*[contains(text(), 'marinaAutoQuiz')]/../../..//*[contains(text(), 'Delete')]" to be present
+    Then MUJ take screenshot
     Then I click on element with xpath "//*[contains(text(), 'marinaAutoQuiz')]/../../..//*[contains(text(), 'Delete')]"
     Then I click on element with xpath "//mat-dialog-container[@role='dialog']/../..//button[2]"
     And I wait for element with xpath "//div[@class='quizzes']" to be present
     Then I wait for 5 sec
     Then element with xpath "//div[@class='quizzes']" should not contain text "marinaAutoQuiz"
+    Then MUJ take screenshot
     Then I click on element with xpath "//h5[contains(text(),'Log Out')]"
     Then I click on element with xpath "//ac-modal-confirmation/../..//button/..//*[contains(text(), 'Log Out')]"
     And I wait for element with xpath "//ac-login-page/../..//h3" to be present

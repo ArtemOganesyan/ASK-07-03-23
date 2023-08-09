@@ -1,7 +1,7 @@
 @umit_f1
 Feature: Automation Test
 
-  @test1
+  @UA_test1
   Scenario: Create New Assignment
     Given I open url "http:/ask-stage.portnov.com"
     Then I type "teacher@gmail.com" into element with xpath "//input[@formcontrolname='email']"
@@ -19,7 +19,7 @@ Feature: Automation Test
     Then I click on element with xpath "//span[contains(text(),'Give Assignment')]"
 
 
-  @test2
+  @UA_test2
   Scenario: Student Account Password Change Steps
     Given I open url "http:/ask-stage.portnov.com"
     Then I type "student25@gmail.com" into element with xpath "//input[@formcontrolname='email']"

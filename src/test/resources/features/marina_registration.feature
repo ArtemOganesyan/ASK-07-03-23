@@ -16,6 +16,7 @@ Feature: New user registration then teacher deletes it
     Then MUJ activate user with email "eliminate@email.com"
     And I wait for 4 sec
     Then element with xpath "//mat-card/h4" should contain text "You have been Registered."
+    Then MUJ take screenshot
     Then element with xpath "//mat-icon[contains(text(), 'done')]" should be present
     Then I click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."
     Then I wait for element with xpath "//img[@class='center-logo']" to be present
@@ -30,6 +31,7 @@ Feature: New user registration then teacher deletes it
     Then I click on element with xpath "//h4[contains(text(), 'Eliminate')]"
     Then I click on element with xpath "//mat-icon[contains(text(), 'settings')]/../../..//button"
     Then I scroll to the element with xpath "//mat-icon[contains(text(), 'delete')]/.." with offset 1
+    Then MUJ take screenshot
     Then I click on element with xpath "//mat-icon[contains(text(), 'delete')]/.."
     And I wait for element with xpath "//span[contains(text(), 'Delete')]/.." to be present
     And I wait for 3 sec
@@ -37,9 +39,11 @@ Feature: New user registration then teacher deletes it
     Then I click on element with xpath "//span[contains(text(), 'Delete')]/.."
     Then I wait for element with xpath "//h4[contains(text(), 'Management')]" to be present
     Then element with xpath "//ac-users-list/..//h4" should not contain text "Eliminate"
+    Then MUJ take screenshot
     Then I click on element with xpath "//h5[contains(text(),'Log Out')]"
     Then I click on element with xpath "//ac-modal-confirmation/../..//button/..//*[contains(text(), 'Log Out')]"
     And I wait for element with xpath "//ac-login-page/../..//h3" to be present
+    Then MUJ take screenshot
     Then element with xpath "//ac-login-page/../..//h3" should contain text "Assessment Control"
     Then element with xpath "//ac-login-page/../..//h5" should contain text "Portnov Computer School"
     Then element with xpath "//img[@class='center-logo']" should be displayed
@@ -62,6 +66,7 @@ Feature: New user registration then teacher deletes it
     And I wait for element with xpath "//mat-card/h4" to be present
     And I wait for 4 sec
     Then element with xpath "//mat-card/h4" should contain text "You have been Registered."
+    Then MUJ take screenshot
     Then element with xpath "//mat-icon[contains(text(), 'done')]" should be present
     Then I click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."
     Then I wait for element with xpath "//img[@class='center-logo']" to be present
@@ -76,6 +81,7 @@ Feature: New user registration then teacher deletes it
     Then I click on element with xpath "<field2>"
     Then I click on element with xpath "//mat-icon[contains(text(), 'settings')]/../../..//button"
     Then I scroll to the element with xpath "//mat-icon[contains(text(), 'delete')]/.." with offset 1
+    Then MUJ take screenshot
     Then I click on element with xpath "//mat-icon[contains(text(), 'delete')]/.."
     And I wait for element with xpath "//span[contains(text(), 'Delete')]/.." to be present
     Then I click on element with xpath "//span[contains(text(), 'Delete')]/.."
@@ -84,6 +90,7 @@ Feature: New user registration then teacher deletes it
     Then I click on element with xpath "//h5[contains(text(),'Log Out')]"
     Then I click on element with xpath "//ac-modal-confirmation/../..//button/..//*[contains(text(), 'Log Out')]"
     And I wait for element with xpath "//ac-login-page/../..//h3" to be present
+    Then MUJ take screenshot
     Then element with xpath "//ac-login-page/../..//h3" should contain text "Assessment Control"
     Then element with xpath "//ac-login-page/../..//h5" should contain text "Portnov Computer School"
     Then element with xpath "//img[@class='center-logo']" should be displayed

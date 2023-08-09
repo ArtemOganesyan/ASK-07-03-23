@@ -63,6 +63,7 @@ Feature: ASK E2E
     Then element with xpath "//ac-quiz-passing-percentage/..//h3" should contain text "Passing Rate"
     Then element with xpath "//ac-quiz-passing-percentage/..//h1" should contain text "75%"
     Then element with xpath "//ac-quiz-passing-percentage/..//h5" should contain text "12 of 16 Points"
+    Then MUJ take screenshot
     Then I click on element with xpath "//span[contains(text(), 'Save')]/.."
     And I wait for element with xpath "//ac-quizzes-list" to be present
     And I wait for element with xpath "//mat-accordion/.. //mat-panel-title[contains(text(), 'marinaAssignment')]" to be present
@@ -77,6 +78,7 @@ Feature: ASK E2E
     And I scroll to the element with xpath "//*[contains(text(), 'Auto')]/../..//mat-pseudo-checkbox" with offset 1
     Then I click on element with xpath "//*[contains(text(), 'Auto')]/../..//mat-pseudo-checkbox"
     Then element with xpath "//form/div/h5" should contain text "Total Selected Students: 1"
+    Then MUJ take screenshot
     Then I click on element with xpath "//button[@type='submit']"
     Then I wait for element with xpath "//ac-assignments-list-page" to be present
     Then element with xpath "//h4" should contain text "List of Assignments"
@@ -100,6 +102,7 @@ Feature: ASK E2E
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "STUDENT"
     And I wait for element with xpath "//span[@class='bold']/../..//p[contains(text(), 'You have')]" to be present
     Then element with xpath "//span[@class='bold']/../..//p[contains(text(), 'You have')]" should contain text "1"
+    Then MUJ take screenshot
     Then I click on element with xpath "//span[contains(text(), 'Go To My Assignments')]/.."
     Then element with xpath "//td/../../../../..//mat-card" should contain text "marinaAssignment"
     And I wait for element with xpath "//span[contains(text(), 'Go To Assessment')]/.." to be present
@@ -111,6 +114,7 @@ Feature: ASK E2E
     And I wait for element with xpath "//mat-radio-button[1]/label/div//div[@class='mat-radio-inner-circle']" to be present
     Then I click on element with xpath "//mat-radio-button[1]/label/div//div[@class='mat-radio-inner-circle']"
     Then I click on element with xpath "//mat-checkbox[1]/label//div[@class='mat-checkbox-inner-container']"
+    Then MUJ take screenshot
     Then I click on element with xpath "//span[contains(text(), 'Submit My Answers')]/.."
     And I wait for element with xpath "//ac-modal-notification/h1" to be present
     And I wait for 2 sec
@@ -123,6 +127,7 @@ Feature: ASK E2E
     Then element with xpath "//h4[contains(text(), 'My Grades')]" should be present
     Then element with xpath "//td[@class='quiz-name']" should contain text "marinaAssignment"
     Then element with xpath "//span[@class='pending']" should contain text "PENDING"
+    Then MUJ take screenshot
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then I click on element with xpath "//span[contains(text(), 'Log Out')]/.."
     And I wait for element with xpath "//img[@class='center-logo']" to be present
@@ -144,6 +149,7 @@ Feature: ASK E2E
     Then I click on element with xpath "//h5[contains(text(), 'Submissions')]"
     Then element with xpath "//mat-card/h4" should contain text "Submissions"
     Then element with xpath "//td[contains(text(), 'marinaAssignment')]" should be present
+    Then MUJ take screenshot
     Then I wait for element with xpath "//td[contains(text(), 'marinaAssignment')]/..//button" to be present
     And I wait for 2 sec
     Then I click on element with xpath "//td[contains(text(), 'marinaAssignment')]/..//button"
@@ -153,8 +159,10 @@ Feature: ASK E2E
     Then element with xpath "//td[contains(text(), 'Actual points / percentage:')]/..//td[@class='bold']" should contain text "15 of 16 / 94%"
     Then element with xpath "//div[@class='result']//div[1]" should contain text "ASSESSMENT FAILED"
     Then element with xpath "//div[@class='result']//div[2]" should contain text "failed show-stopper*"
+    Then MUJ take screenshot
     Then I click on element with xpath "//*[contains(text(), '1 of 3')]/../..//button[2]"
     Then element with xpath "//div[@class='result']//div[1]" should contain text "ASSESSMENT PASSED"
+    Then MUJ take screenshot
     Then element with xpath "//td[contains(text(), 'Actual points / percentage:')]/..//td[@class='bold']" should contain text "16 of 16 / 100%"
     Then I type "Great" into element with xpath "//*[contains(text(), '1 of 3')]/../..//textarea"
     Then I type "Wonderful" into element with xpath "//*[contains(text(), '2 of 3')]/../..//textarea"
@@ -167,6 +175,7 @@ Feature: ASK E2E
     Then I wait for element with xpath "//td[contains(text(), 'marinaAssignment')]" to be present
     And I wait for 2 sec
     Then element with xpath "//td[contains(text(), 'marinaAssignment')]/..//span[contains(text(), 'PASSED')]" should contain text "PASSED"
+    Then MUJ take screenshot
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then I click on element with xpath "//span[contains(text(), 'Log Out')]/.."
     And I wait for element with xpath "//img[@class='center-logo']" to be present
@@ -188,6 +197,7 @@ Feature: ASK E2E
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "STUDENT"
     Then element with xpath "//p[contains(text(), 'There are')]/span[1]" should contain text "1"
     Then element with xpath "//p[contains(text(), 'There are')]/span[2]" should contain text "0"
+    Then MUJ take screenshot
     Then I click on element with xpath "//*[contains(text(), 'Go To My Grades')]/.."
     Then element with xpath "//td[@class='quiz-name']" should contain text "marinaAssignment"
     And I wait for 2 sec
@@ -200,6 +210,7 @@ Feature: ASK E2E
     Then element with xpath "//*[contains(text(), '2 of 3')]/..//div[contains(text(), 'Teacher Comment')]/.." should contain text "Wonderful"
     Then element with xpath "//*[contains(text(), '3 of 3')]/..//div[contains(text(), 'Teacher Comment')]/.." should contain text "Amazing"
     Then element with xpath "//div[contains(text(), 'Summary')]/.." should contain text "Great job!"
+    Then MUJ take screenshot
     Then I click on element with xpath "//*[contains(text(), 'Close')]/.."
     Then I wait for element with xpath "//h5[contains(text(), 'Log Out')]" to be present
     Then I click on element with xpath "//h5[contains(text(), 'Log Out')]"
@@ -223,6 +234,7 @@ Feature: ASK E2E
     Then I click on element with xpath "//h5[contains(text(), 'Quizzes')]"
     Then I wait for element with xpath "//h4[contains(text(), 'List of Quizzes')]" to be present
     Then element with xpath "//mat-panel-title[contains(text(), 'marinaAssignment')]" should be present
+    Then MUJ take screenshot
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'marinaAssignment')]/..//mat-panel-description"
     Then I wait for element with xpath "//mat-panel-title[contains(text(), 'marinaAssignment')]/../../..//span[contains(text(), 'Delete')]/.." to be present
     Then I click on element with xpath "//mat-panel-title[contains(text(), 'marinaAssignment')]/../../..//span[contains(text(), 'Delete')]/.."
@@ -241,6 +253,7 @@ Feature: ASK E2E
     And I wait for 1 sec
     Then I click on element with xpath "//div[@class='cdk-overlay-pane']/div/div/button"
     Then I wait for element with xpath "//ac-modal-confirmation/div/button[2]" to be present
+    Then MUJ take screenshot
     Then I click on element with xpath "//ac-modal-confirmation/div/button[2]"
     Then I wait for 2 sec
     Then element with xpath "//*[contains(text(), 'marinaAssignment')]" should not be present

@@ -55,5 +55,13 @@ public class marinaStepsDefs {
         String[] ar = activationResult.split(";");
         Helper.activateUser(Integer.parseInt(ar[0]), ar[1]);
     }
+
+
+    @Then("^MUJ take screenshot$")
+    public void mujTakeScreenshot() throws Exception {
+        TakesScreenshot screenshotTaker = (TakesScreenshot) getDriver();
+        File screenshot = screenshotTaker.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshot, new File("target/cucumber/screenshot_"+ System.currentTimeMillis() +".png"));
+    }
 }
 

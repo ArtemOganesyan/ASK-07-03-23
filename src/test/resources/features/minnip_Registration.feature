@@ -14,6 +14,7 @@ Feature: New user account registration in ASK
     Then MP type "12345Abc" into element with xpath "//input[@formcontrolname='confirmPassword']"
     And MP click on element with xpath "//button[@type='submit']"
     Then MP activate user with email "hello_student@gmail.com"
+    Then MP wait for 3 sec
     Then MP element with xpath "//mat-card/h4" should contain text "You have been Registered."
     Then MP wait for element with xpath "//mat-icon[contains(text(), 'done')]" to be present
     Then MP click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."
@@ -22,6 +23,7 @@ Feature: New user account registration in ASK
     Then MP type "12345Abc" into "Password Field"
     Then MP click on element with xpath "//span[contains(text(), 'Sign In')]/.."
     Then MP wait for element with xpath "//ac-side-menu/mat-list/header/div/p" to be present
+    Then MP wait for 3 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then MP click on element with xpath "//h4[contains(text(), 'Management')]"
     Then MP scroll to the element with xpath "//h4[contains(text(),'Hello Student')]" with offset 1
@@ -29,6 +31,7 @@ Feature: New user account registration in ASK
     Then MP click on element with xpath "//mat-icon[contains(text(), 'settings')]/../../..//button"
     Then MP scroll to the element with xpath "//mat-icon[contains(text(), 'delete')]/.." with offset 1
     Then MP wait for element with xpath "//h1[contains(text(),'Confirmation')]" to be present
+    Then MP wait for 3 sec
     Then MP element with xpath "//div[@class='mat-dialog-content']/p" should contain text "Are you sure"
     Then MP click on element with xpath "//span[contains(text(), 'Delete')]/.."
     Then MP wait for element with xpath "//h4[contains(text(), 'Management')]" to be present
@@ -51,6 +54,7 @@ Feature: New user account registration in ASK
     Then MP type "12345Abc" into element with xpath "//input[@formcontrolname='confirmPassword']"
     And MP click on element with xpath "//button[@type='submit']"
     Then MP activate user with email "<email1>"
+    Then MP wait for 2 sec
     Then MP element with xpath "//mat-card/h4" should contain text "You have been Registered."
     Then MP wait for element with xpath "//mat-icon[contains(text(), 'done')]" to be present
     Then MP click on element with xpath "//*[contains(text(), 'Back to Login Page')]/.."
@@ -59,6 +63,7 @@ Feature: New user account registration in ASK
     Then MP type "12345Abc" into "Password Field"
     Then MP click on element with xpath "//span[contains(text(), 'Sign In')]/.."
     Then MP wait for element with xpath "//ac-side-menu/mat-list/header/div/p" to be present
+    Then MP wait for 2 sec
     Then element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
     Then MP click on element with xpath "//h4[contains(text(), 'Management')]"
     Then MP scroll to the element with xpath "<text1>" with offset 1
@@ -66,6 +71,7 @@ Feature: New user account registration in ASK
     Then MP click on element with xpath "//mat-icon[contains(text(), 'settings')]/../../..//button"
     Then MP scroll to the element with xpath "//mat-icon[contains(text(), 'delete')]/.." with offset 1
     Then MP wait for element with xpath "//h1[contains(text(),'Confirmation')]" to be present
+    Then MP wait for 2 sec
     Then MP element with xpath "//div[@class='mat-dialog-content']/p" should contain text "Are you sure"
     Then MP click on element with xpath "//span[contains(text(), 'Delete')]/.."
     Then MP wait for element with xpath "//h4[contains(text(), 'Management')]" to be present

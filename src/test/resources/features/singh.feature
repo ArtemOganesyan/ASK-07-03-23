@@ -25,6 +25,7 @@ Feature: Test Set: Multiple Choice Question
     Then I wait for element with xpath "//span[contains(text(),'Give Assignment')]/.." to be present
     Then I wait for 1 sec
     Then I click on element with xpath "//span[contains(text(),'Give Assignment')]/.."
+    Then I take screenshot
 
 
   @SS_II
@@ -43,6 +44,7 @@ Feature: Test Set: Multiple Choice Question
     Then I wait for element with xpath "//input[@formcontrolname='name']" to be present
     Then I type "My test quiz name" into element with xpath "//input[@formcontrolname='name']"
     Then I click on element with xpath "//*[contains(text(), 'add_circle')]/../.."
+    Then I take screenshot
 
 
   @SS_III
@@ -61,6 +63,7 @@ Feature: Test Set: Multiple Choice Question
     Then I type "My test quiz name" into element with xpath "//input[@formcontrolname='name']"
 #        Then I click on element with xpath "//*[contains(text(), 'add_circle')]/../.."
     Then I create 15 questions
+    Then I take screenshot
 
   @SS_IV
   Scenario: User creates 16 questions
@@ -78,4 +81,5 @@ Feature: Test Set: Multiple Choice Question
     Then I type "My test quiz name" into element with xpath "//input[@formcontrolname='name']"
       #Then I click on element with xpath "//*[contains(text(), 'add_circle')]/../.."
     Then I create 16 questions
+    Then I take screenshot
     Then I wait for element with xpath "//mat-panel-title[contains(text(),'Q16: new empty question')]" to not be present

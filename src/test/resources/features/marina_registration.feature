@@ -35,7 +35,7 @@ Feature: New user registration then teacher deletes it
     Then I click on element with xpath "//mat-icon[contains(text(), 'delete')]/.."
     And I wait for element with xpath "//span[contains(text(), 'Delete')]/.." to be present
     And I wait for 3 sec
-    Then element with xpath "//div[@class='mat-dialog-content']/p" should contain text "Are you sure"
+    Then element with xpath "//div[@class='mat-dialog-content']//p" should contain text "Are you sure"
     Then I click on element with xpath "//span[contains(text(), 'Delete')]/.."
     Then I wait for element with xpath "//h4[contains(text(), 'Management')]" to be present
     Then element with xpath "//ac-users-list/..//h4" should not contain text "Eliminate"

@@ -1,22 +1,23 @@
 # MinniP Feature File for LOGIN
 
-@minnip_f1
+@minnip_login
 Feature: Login into ASK app
 
   @minnip_f11
-  Scenario: Log in to ASK with valid credentials and Logout
+  Scenario: Log into ASK with valid credentials and Logout
     Given MP open url "http://ask-stage.portnov.com/#/login"
     Then MP type "teacher_9@gmail.com" into element with xpath "//input[@formcontrolname='email']"
     Then MP type "12345Abc" into element with xpath "//input[@formcontrolname='password']"
     Then MP click on element with xpath "//button[@type='submit']"
     Then MP wait for element with xpath "//h5[contains(text(), 'Quizzes')]" to be present
-    Then MP element with xpath "//ac-side-menu/mat-list/header/div/p" should contain text "TEACHER"
+    Then MP element with xpath "//h3[contains(text(), 'Teacher Nine')]" should contain text "Teacher Nine"
     Then MP click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then MP click on element with xpath "//span[contains(text(), 'Log Out')]/../../..//button[2]"
     And MP is successfully logged out
     Then MP wait for element with xpath "//img[@class='center-logo']" to be present
-    Then element with xpath "//input[@formcontrolname='email']" should not contain text "teacher_9@gmail.com"
-    Then element with xpath "//input[@formcontrolname='password']" should not contain text "12345Abc"
+    Then Mp element with xpath "//input[@formcontrolname='email']" should not contain text "teacher_9@gmail.com"
+    Then Mp element with xpath "//input[@formcontrolname='password']" should not contain text "12345Abc"
+
 
   @minnip_f12
   Scenario Outline: Log into ASK with valid credentials

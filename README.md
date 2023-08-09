@@ -13,3 +13,11 @@ Umit Avcu (email@fake.com)\
 Karen\
 !!! THAT WAS AWESOME,WOW !!!\
 !!! This is Awesome !!!\
+=======
+>>>>>>> main
+Karen
+!!! THAT WAS AWESOME,WOW !!!
+
+!!! This is Awesome !!!
+>>>>>>> main
+> changes

@@ -1,4 +1,4 @@
-#shaginian add this new line
+#shaginian scenarios for UI automation
 @shaginian
   Feature: E2E for "User's Management - Delete User"
 

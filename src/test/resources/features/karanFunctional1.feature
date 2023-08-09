@@ -1,7 +1,7 @@
 @karanFunctional1
 Feature:Functional testing
 
-  @scenario1
+  @scenario1_karanFunctional1
   Scenario: Teacher change the name
     Given I open url "http://ask-stage.portnov.com/#/login"
     Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"
@@ -19,7 +19,7 @@ Feature:Functional testing
     Then element with xpath "//td[contains(text(),'TeacherEleven')]/../../../../.." should contain text "TeacherEleven"
 
 
-  @scenario2
+  @scenario2_karanFunctional1
   Scenario: Teacher change the password
     Given I open url "http://ask-stage.portnov.com/#/login"
     Then I type "student1ask@gmail.com" into element with xpath "//input[@formcontrolname='email']"

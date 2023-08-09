@@ -2,7 +2,7 @@
   Feature: DVS Features
 
 
-@scenario_1
+@scenario_dvs1
 Scenario: Update Quiz Points
 Given DVS open url "http://ask-stage.portnov.com"
 Then DVS type "teacher@gmail.com" into "Email field"

@@ -10,7 +10,6 @@ Feature: Login into ASK app
     Then MP type "12345Abc" into element with xpath "//input[@formcontrolname='password']"
     Then MP click on element with xpath "//button[@type='submit']"
     Then MP wait for element with xpath "//h5[contains(text(), 'Quizzes')]" to be present
-#    Then MP element with xpath "//h3[contains(text(), 'Teacher Nine')]" should contain text "Teacher Nine"
     Then MP click on element with xpath "//h5[contains(text(), 'Log Out')]"
     Then MP click on element with xpath "//span[contains(text(), 'Log Out')]/../../..//button[2]"
     And MP is successfully logged out

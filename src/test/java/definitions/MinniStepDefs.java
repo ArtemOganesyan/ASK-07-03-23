@@ -147,4 +147,9 @@ public class MinniStepDefs {
         String actualText = getDriver().findElement(By.xpath(xpath)).getText();
         assertThat(actualText).doesNotContain(text);
     }
+
+    @Then("MP element with xpath {string} should be displayed")
+    public void mpElementWithXpathShouldBeDisplayed(String xpath) {
+        assertThat(getDriver().findElement(By.xpath(xpath)).isDisplayed()).isTrue();
+    }
 }
